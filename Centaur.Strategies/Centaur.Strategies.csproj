@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F02127F9-3705-4B19-A270-624CDE19065F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Centaur.Strategies</RootNamespace>
+    <AssemblyName>Centaur.Strategies</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Centaur.MoneyManagements">
+      <HintPath>..\..\..\..\Ref\Centaur.MoneyManagements.dll</HintPath>
+    </Reference>
+    <Reference Include="Centaur.Tools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Ref\Centaur.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="Centaur.WealthLabIndicators">
+      <HintPath>..\..\..\..\Ref\Centaur.WealthLabIndicators.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Centaur.MathExtensions">
+      <HintPath>..\..\..\..\Ref\Framework.Centaur.MathExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="TSLab.DataSource">
+      <HintPath>C:\Program Files (x86)\TSLab 2.0\TSLab.DataSource.dll</HintPath>
+    </Reference>
+    <Reference Include="TSLab.Script">
+      <HintPath>C:\Program Files (x86)\TSLab 2.0\TSLab.Script.dll</HintPath>
+    </Reference>
+    <Reference Include="TSLab.Script.Handlers">
+      <HintPath>C:\Program Files (x86)\TSLab 2.0\TSLab.Script.Handlers.dll</HintPath>
+    </Reference>
+    <Reference Include="WealthLab">
+      <HintPath>..\..\..\..\Ref\WealthLab.dll</HintPath>
+    </Reference>
+    <Reference Include="WealthLab.Indicators">
+      <HintPath>..\..\..\..\Ref\WealthLab.Indicators.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdaptivePCAdx\AdaptivePCAdxClassic\AdaptivePCAdxClassic_OF.cs" />
+    <Compile Include="AdaptivePCAdx\AdaptivePCAdxClassic\AdaptivePCAdxClassic_FixLot.cs" />
+    <Compile Include="AdaptivePCAdx\AdaptivePCAdxCombine\AdaptivePCAdxCombine_OF.cs" />
+    <Compile Include="AdaptivePCAdx\AdaptivePCAdxMiddle\AdaptivePCAdxMiddle_OF.cs" />
+    <Compile Include="AdaptivePCAdx\AdaptivePCAdxMiddle\AdaptivePCAdxMiddle_FixLot.cs" />
+    <Compile Include="AdaptivePCAdx\AdaptivePCAdxCombine\AdaptivePCAdxCombine_FixLot.cs" />
+    <Compile Include="AdaptivePCEr\AdaptivePCErClassic\AdaptivePCErClassic_OF.cs" />
+    <Compile Include="AdaptivePCEr\AdaptivePCErClassic\AdaptivePCErClassic_FixLot.cs" />
+    <Compile Include="AdaptivePCEr\AdaptivePCErMiddle\AdaptivePCErMiddle_OF.cs" />
+    <Compile Include="AdaptivePCEr\AdaptivePCErMiddle\AdaptivePCErMiddle_FixLot.cs" />
+    <Compile Include="DonchianBreakout\DonchianBreakoutBySteps\DonchianBreakoutBySteps_FixLot.cs" />
+    <Compile Include="DonchianBreakout\DonchianBreakoutClassic\DonchianBreakoutClassic_OF.cs" />
+    <Compile Include="DonchianBreakout\DonchianBreakoutMiddleSmaCA\DonchianBreakoutMiddleSmaCA_OF.cs" />
+    <Compile Include="DonchianBreakout\DonchianBreakoutMiddleSmaCA\DonchianBreakoutMiddleSmaCA_FixLot.cs" />
+    <Compile Include="DonchianBreakout\DonchianBreakoutMiddle\DonchianBreakoutMiddle_OF.cs" />
+    <Compile Include="DonchianBreakout\DonchianBreakoutMiddle\DonchianBreakoutMiddle_FixLot.cs" />
+    <Compile Include="DonchianBreakout\DonchianBreakoutClassic\DonchianBreakoutClassic_FixLot.cs" />
+    <Compile Include="DoubleBollingerBands\DoubleBollingerBandsMiddle\DoubleBollingerBandsMiddle_OF.cs" />
+    <Compile Include="DoubleBollingerBands\DoubleBollingerBandsMiddle\DoubleBollingerBandsMiddle_FixLot.cs" />
+    <Compile Include="Nrtr\NrtrClassic\NrtrClassic_OF.cs" />
+    <Compile Include="Nrtr\NrtrClassic\NrtrClassic_FixLot.cs" />
+    <Compile Include="DonchianBreakout\DonchianBreakoutBySteps\DonchianBreakoutBySteps_OF.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuperTrend\SuperTrendAtr\SuperTrendAtr_OF.cs" />
+    <Compile Include="SuperTrend\SuperTrendAtr\SuperTrendAtr_FixLot.cs" />
+    <Compile Include="VolatilityBreakout\VolatilityBreakoutClassic\VolatilityBreakoutClassic_OF.cs" />
+    <Compile Include="VolatilityBreakout\VolatilityBreakoutClassic\VolatilityBreakoutClassic_FixLot.cs" />
+    <Compile Include="VolatilityBreakout\VolatilityBreakoutMiddle\VolatilityBreakoutMiddle_OF.cs" />
+    <Compile Include="VolatilityBreakout\VolatilityBreakoutMiddle\VolatilityBreakoutMiddle_FixLot.cs" />
+    <Compile Include="VolatilityBreakout\VolatilityBreakoutСhandelier\VolatilityBreakoutСhandelier_OF.cs" />
+    <Compile Include="VolatilityBreakout\VolatilityBreakoutСhandelier\VolatilityBreakoutСhandelier_FixLot.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
